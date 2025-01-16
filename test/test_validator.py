@@ -38,11 +38,11 @@ class TestDataProcessor(unittest.TestCase):
         # ???
         MockValidator.is_validated.return_value = True
 
-        pay_processor = DataProcessor()
-        order = Data()
-        pay_processor.process_data(order)
+        data_processor = DataProcessor()
+        data = Data()
+        data_processor.process_data(data)
 
-        self.assertEqual(order.status, 'VALID')
+        self.assertEqual(data.status, 'VALID')
 
     def test_validation_fail(self):
         # ???
